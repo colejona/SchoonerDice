@@ -8,4 +8,8 @@ describe("scoreFourOfAKind", () => {
     it("can score a scrambled four of a kind", () => {
         expect(scoreFourOfAKind([5, 5, 5, 4, 5])).toEqual(24);
     });
+
+    it("can score an unqualified four of a kind", () => {
+        expect(scoreFourOfAKind([5, 3, 5, 4, 5])).toEqual(0);
+    });
 });
