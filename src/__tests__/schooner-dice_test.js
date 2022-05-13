@@ -61,4 +61,8 @@ describe("SchoonerDice", () => {
     it("can score a " + Category.SCHOONER, () => {
         expect(SchoonerDice.score(Category.SCHOONER, [1, 1, 1, 1, 1])).toEqual(50);
     });
+
+    it("can score a " + Category.CHANCE, () => {
+        expect(SchoonerDice.score(Category.CHANCE, [1, 1, 1, 1, 2])).toEqual(6);
+    });
 });
