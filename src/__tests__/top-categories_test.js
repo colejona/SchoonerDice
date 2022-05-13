@@ -10,8 +10,10 @@ describe("topCategories", () => {
     });
 
     it("can return only SCHOONER", () => {
-        const result = topCategories([3, 3, 3, 3, 3]);
-        expect(result).toHaveLength(1);
-        expect(result).toContain(Category.SCHOONER);
+        expect(topCategories([3, 3, 3, 3, 3])).toEqual([Category.SCHOONER]);
+    });
+
+    it("can return only CHANCE", () => {
+        expect(topCategories([3, 3, 2, 2, 1])).toEqual([Category.CHANCE]);
     });
 });
