@@ -12,4 +12,8 @@ describe("scoreOnes", () => {
     it("can score 0 ones", () => {
         expect(scoreOnes([2, 5, 8, 4, 2])).toEqual(0);
     });
+
+    it("can score 5 ones", () => {
+        expect(scoreOnes([1, 1, 1, 1, 1])).toEqual(5);
+    });
 });
