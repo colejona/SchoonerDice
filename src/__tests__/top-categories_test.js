@@ -2,9 +2,17 @@ const {topCategories} = require("../top-categories");
 const Category = require("../category");
 
 describe("topCategories", () => {
-    it("can return a list of more than one result", () => {
+    it("THREE_OF_A_KIND comes with CHANCE", () => {
         const result = topCategories([3, 3, 3, 6, 7]);
         expect(result).toHaveLength(2);
+        expect(result).toContain(Category.THREE_OF_A_KIND);
+        expect(result).toContain(Category.CHANCE);
+    });
+
+    it("FOUR_OF_A_KIND comes with THREE_OF_A_KIND and CHANCE", () => {
+        const result = topCategories([8, 8, 8, 8, 2]);
+        expect(result).toHaveLength(3);
+        expect(result).toContain(Category.FOUR_OF_A_KIND);
         expect(result).toContain(Category.THREE_OF_A_KIND);
         expect(result).toContain(Category.CHANCE);
     });
