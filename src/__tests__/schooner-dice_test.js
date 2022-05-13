@@ -14,6 +14,10 @@ describe("SchoonerDice", () => {
         expect(SchoonerDice.score(Category.THREES, [3, 2, 2, 3, 5])).toEqual(6);
     });
 
+    it("can score a " + Category.FOURS, () => {
+        expect(SchoonerDice.score(Category.FOURS, [3, 4, 2, 3, 5])).toEqual(4);
+    });
+
     it("can score a " + Category.FULL_HOUSE, () => {
         expect(SchoonerDice.score(Category.FULL_HOUSE, [1, 1, 1, 7, 7])).toEqual(25);
     });
