@@ -4,6 +4,7 @@ const {scoreThreeOfAKind} = require("./score-three-of-a-kind");
 const {scoreFourOfAKind} = require("./score-four-of-a-kind");
 const {scoreFullHouse} = require("./score-full-house");
 const {scoreSmallStraight} = require("./score-small-straight");
+const {scoreAllDifferent} = require("./score-all-different");
 
 exports.score = (category, dice) => {
     switch (category) {
@@ -31,5 +32,7 @@ exports.score = (category, dice) => {
             return scoreFullHouse(dice);
         case Category.SMALL_STRAIGHT:
             return scoreSmallStraight(dice);
+        case Category.ALL_DIFFERENT:
+            return scoreAllDifferent(dice);
     }
 }
