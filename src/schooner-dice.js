@@ -1,11 +1,12 @@
 const Category = require("./category");
-const { scoreSingleNumbers } = require("./score-single-numbers");
-const { scoreThreeOfAKind } = require("./score-three-of-a-kind");
-const { scoreFourOfAKind } = require("./score-four-of-a-kind");
-const { scoreFullHouse } = require("./score-full-house");
+const {scoreSingleNumbers} = require("./score-single-numbers");
+const {scoreThreeOfAKind} = require("./score-three-of-a-kind");
+const {scoreFourOfAKind} = require("./score-four-of-a-kind");
+const {scoreFullHouse} = require("./score-full-house");
+const {scoreSmallStraight} = require("./score-small-straight");
 
 exports.score = (category, dice) => {
-    switch(category) {
+    switch (category) {
         case Category.ONES:
             return scoreSingleNumbers(1, dice);
         case Category.TWOS:
@@ -28,5 +29,7 @@ exports.score = (category, dice) => {
             return scoreFourOfAKind(dice);
         case Category.FULL_HOUSE:
             return scoreFullHouse(dice);
+        case Category.SMALL_STRAIGHT:
+            return scoreSmallStraight(dice);
     }
 }

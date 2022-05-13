@@ -45,4 +45,8 @@ describe("SchoonerDice", () => {
     it("can score a " + Category.FULL_HOUSE, () => {
         expect(SchoonerDice.score(Category.FULL_HOUSE, [1, 1, 1, 7, 7])).toEqual(25);
     });
+
+    it("can score a " + Category.SMALL_STRAIGHT, () => {
+        expect(SchoonerDice.score(Category.SMALL_STRAIGHT, [1, 2, 3, 4, 7])).toEqual(30);
+    });
 });
