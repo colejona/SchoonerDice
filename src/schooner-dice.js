@@ -5,7 +5,5 @@ exports.score = (category, dice) => {
     switch(category) {
         case Category.FULL_HOUSE:
             return scoreFullHouse(dice);
-        // case Category.ONES:
-        //     return scoreOnes(dice);
     }
 }
