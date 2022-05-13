@@ -8,4 +8,8 @@ describe("scoreLargeStraight", () => {
     it("can score a scrambled large straight", () => {
         expect(scoreLargeStraight([3, 2, 6, 4, 5])).toEqual(40);
     });
+
+    it("can score an unqualified large straight", () => {
+        expect(scoreLargeStraight([7, 2, 6, 4, 5])).toEqual(0);
+    });
 });
