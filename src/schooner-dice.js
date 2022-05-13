@@ -7,6 +7,7 @@ const {scoreAllDifferent} = require("./score-all-different");
 const {scoreLargeStraight} = require("./score-large-straight");
 const {scoreSchooner} = require("./score-schooner");
 const {scoreChance} = require("./score-chance");
+const {topCategories} = require("./top-categories");
 
 exports.score = (category, dice) => {
     switch (category) {
@@ -45,6 +46,6 @@ exports.score = (category, dice) => {
     }
 }
 
-exports.topCategories = () => {
-    return [Category.THREE_OF_A_KIND, Category.CHANCE];
+exports.topCategories = dice => {
+    return topCategories(dice);
 }
