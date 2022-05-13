@@ -24,4 +24,12 @@ describe("topCategories", () => {
     it("can return only CHANCE", () => {
         expect(topCategories([3, 3, 2, 2, 1])).toEqual([Category.CHANCE]);
     });
+
+    it("can find FULL_HOUSE, THREE_OF_A_KIND, and CHANCE", () => {
+        const result = topCategories([8, 8, 3, 3, 3]);
+        expect(result).toHaveLength(3);
+        expect(result).toContain(Category.FULL_HOUSE);
+        expect(result).toContain(Category.THREE_OF_A_KIND);
+        expect(result).toContain(Category.CHANCE);
+    });
 });
