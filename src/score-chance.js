@@ -1,3 +1,3 @@
 exports.scoreChance = dice => {
-    return 6;
+    return dice.reduce((sum, nextNumber) => sum + nextNumber, 0);
 };
