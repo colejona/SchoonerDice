@@ -12,6 +12,8 @@ exports.score = (category, dice) => {
             return scoreSingleNumbers(3, dice);
         case Category.FOURS:
             return scoreSingleNumbers(4, dice);
+        case Category.FIVES:
+            return scoreSingleNumbers(5, dice);
         case Category.FULL_HOUSE:
             return scoreFullHouse(dice);
     }
