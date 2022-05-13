@@ -65,4 +65,8 @@ describe("SchoonerDice", () => {
     it("can score a " + Category.CHANCE, () => {
         expect(SchoonerDice.score(Category.CHANCE, [1, 1, 1, 1, 2])).toEqual(6);
     });
+
+    it("can list top categories", () => {
+        expect(SchoonerDice.topCategories([3, 3, 3, 6, 7])).toEqual([Category.THREE_OF_A_KIND, Category.CHANCE]);
+    });
 });

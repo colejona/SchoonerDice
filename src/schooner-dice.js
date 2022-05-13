@@ -45,3 +45,7 @@ exports.score = (category, dice) => {
             return scoreChance(dice);
     }
 }
+
+exports.topCategories = () => {
+    return [Category.THREE_OF_A_KIND, Category.CHANCE];
+}
