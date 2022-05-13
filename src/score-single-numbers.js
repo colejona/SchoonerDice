@@ -1,3 +1,3 @@
-exports.scoreSingleNumbers = (number, dice) => {
-    return dice.reduce((sum, next) => next === number ? sum + number : sum, 0);
+exports.scoreSingleNumbers = (numberToScore, dice) => {
+    return dice.reduce((sum, next) => next === numberToScore ? sum + numberToScore : sum, 0);
 };
