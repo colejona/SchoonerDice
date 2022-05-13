@@ -1,9 +1,12 @@
 # SchoonerDice
 
-## Intro
+Hi there! This is a sample of my coding style. It was entirely done with TDD,
+and you can hopefully get an idea of how the code evolved over time by viewing
+the [commit history](https://github.com/colejona/SchoonerDice/commits/main).
 
-Hi there! This is a sample of my coding style. It was entirely done with TDD, and you can hopefully get an idea of how
-the code evolved over time by viewing the [commit history](https://github.com/colejona/SchoonerDice/commits/main).
+You may also want to take a look around the [tests](src/__tests__) to get a feel for what
+[SchoonerDice](src/schooner-dice.js) can do. [This](src/__tests__/schooner-dice_test.js)
+is a good starting point.
 
 ## How to Run
 
