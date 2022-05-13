@@ -9,7 +9,7 @@ describe("scoreFullHouse", () => {
         expect(scoreFullHouse([3, 5, 3, 5, 5])).toEqual(25);
     });
 
-    it ("can score a bad full house", () => {
+    it ("can score an unqualified full house", () => {
         expect(scoreFullHouse([3, 4, 3, 5, 5])).toEqual(0);
     });
 });
