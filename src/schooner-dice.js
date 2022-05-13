@@ -8,6 +8,8 @@ exports.score = (category, dice) => {
             return scoreSingleNumbers(1, dice);
         case Category.TWOS:
             return scoreSingleNumbers(2, dice);
+        case Category.THREES:
+            return scoreSingleNumbers(3, dice);
         case Category.FULL_HOUSE:
             return scoreFullHouse(dice);
     }
