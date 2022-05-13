@@ -1,3 +1,3 @@
 exports.scoreOnes = dice => {
-    return 4;
+    return dice.reduce((sum, next) => next === 1 ? sum + 1 : sum);
 };
