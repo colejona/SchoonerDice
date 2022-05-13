@@ -38,6 +38,10 @@ describe("SchoonerDice", () => {
         expect(SchoonerDice.score(Category.THREE_OF_A_KIND, [8, 6, 8, 3, 8])).toEqual(33);
     });
 
+    it("can score a " + Category.FOUR_OF_A_KIND, () => {
+        expect(SchoonerDice.score(Category.FOUR_OF_A_KIND, [8, 8, 8, 3, 8])).toEqual(35);
+    });
+
     it("can score a " + Category.FULL_HOUSE, () => {
         expect(SchoonerDice.score(Category.FULL_HOUSE, [1, 1, 1, 7, 7])).toEqual(25);
     });
