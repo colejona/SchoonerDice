@@ -57,4 +57,8 @@ describe("SchoonerDice", () => {
     it("can score a " + Category.LARGE_STRAIGHT, () => {
         expect(SchoonerDice.score(Category.LARGE_STRAIGHT, [1, 2, 3, 4, 5])).toEqual(40);
     });
+
+    it("can score a " + Category.SCHOONER, () => {
+        expect(SchoonerDice.score(Category.SCHOONER, [1, 1, 1, 1, 1])).toEqual(50);
+    });
 });

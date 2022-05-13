@@ -6,6 +6,7 @@ const {scoreFullHouse} = require("./score-full-house");
 const {scoreSmallStraight} = require("./score-small-straight");
 const {scoreAllDifferent} = require("./score-all-different");
 const {scoreLargeStraight} = require("./score-large-straight");
+const {scoreSchooner} = require("./score-schooner");
 
 exports.score = (category, dice) => {
     switch (category) {
@@ -37,5 +38,7 @@ exports.score = (category, dice) => {
             return scoreAllDifferent(dice);
         case Category.LARGE_STRAIGHT:
             return scoreLargeStraight(dice);
+        case Category.SCHOONER:
+            return scoreSchooner(dice);
     }
 }
