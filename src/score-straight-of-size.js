@@ -5,7 +5,7 @@ function sortDice(dice) {
 exports.scoreStraightOfSize = (size, dice, straightScore) => {
     const sortedDice = sortDice(dice);
     const {foundStraight} = sortedDice.reduce((accumulator, nextNumber) => {
-        if (accumulator.lastNumber === undefined) {
+        if (accumulator.lastNumber === null) {
             return {
                 foundStraight: accumulator.foundStraight,
                 consecutiveNumbers: 1,
@@ -30,7 +30,7 @@ exports.scoreStraightOfSize = (size, dice, straightScore) => {
     }, {
         foundStraight: false,
         consecutiveNumbers: 0,
-        lastNumber: undefined
+        lastNumber: null
     });
 
     if (foundStraight) {
