@@ -1,15 +1,21 @@
 exports.scoreNOfAKind = (n, dice) => {
     const {foundThreeOfAKind, sumOfAllDice} = dice.reduce(
         (accumulator, nextNumber) => {
-            accumulator.diceNumbers[nextNumber] = accumulator.diceNumbers[nextNumber] === undefined ? 1 : accumulator.diceNumbers[nextNumber] + 1;
+            let {diceNumbers, foundThreeOfAKind, sumOfAllDice} = accumulator;
 
-            if (accumulator.diceNumbers[nextNumber] === n) {
-                accumulator.foundThreeOfAKind = true;
+            diceNumbers[nextNumber] = diceNumbers[nextNumber] === undefined ? 1 : diceNumbers[nextNumber] + 1;
+
+            if (!foundThreeOfAKind && diceNumbers[nextNumber] === n) {
+                foundThreeOfAKind = true;
             }
 
-            accumulator.sumOfAllDice += nextNumber;
+            sumOfAllDice += nextNumber;
 
-            return accumulator;
+            return {
+                diceNumbers: diceNumbers,
+                foundThreeOfAKind: foundThreeOfAKind,
+                sumOfAllDice: sumOfAllDice
+            };
         }, {
             diceNumbers: {},
             foundThreeOfAKind: false,
